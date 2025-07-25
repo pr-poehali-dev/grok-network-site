@@ -87,6 +87,152 @@ export default function Index() {
         </div>
       </section>
 
+      {/* Website Generator Section */}
+      <section className="container mx-auto px-6 py-20 bg-gradient-to-r from-primary/5 via-secondary/5 to-accent/5">
+        <div className="max-w-5xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
+              Создавайте сайты 
+              <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                {' '}одной фразой
+              </span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              Опишите свою идею — Grok AI создаст полноценный сайт за секунды. 
+              От лендингов до интернет-магазинов.
+            </p>
+          </div>
+
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Website Generator Form */}
+            <Card className="p-8 bg-card/50 backdrop-blur-sm border-primary/10">
+              <h3 className="text-2xl font-bold mb-6 text-center">Генератор сайтов</h3>
+              
+              <div className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium mb-2">Тип сайта</label>
+                  <select className="w-full p-3 rounded-lg bg-background/50 border border-primary/20 focus:border-primary focus:outline-none">
+                    <option>Лендинг</option>
+                    <option>Интернет-магазин</option>
+                    <option>Корпоративный сайт</option>
+                    <option>Блог</option>
+                    <option>Портфолио</option>
+                    <option>Ресторан</option>
+                    <option>Стартап</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label className="block text-sm font-medium mb-2">Опишите ваш проект</label>
+                  <textarea 
+                    className="w-full p-3 rounded-lg bg-background/50 border border-primary/20 focus:border-primary focus:outline-none h-32 resize-none"
+                    placeholder="Например: Создай сайт для кофейни с онлайн заказом, меню, галереей и контактами. Стиль — уютный и современный..."
+                  />
+                </div>
+
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Цветовая схема</label>
+                    <select className="w-full p-3 rounded-lg bg-background/50 border border-primary/20 focus:border-primary focus:outline-none">
+                      <option>Синяя</option>
+                      <option>Зелёная</option>
+                      <option>Фиолетовая</option>
+                      <option>Красная</option>
+                      <option>Минималистичная</option>
+                      <option>Тёмная</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Стиль</label>
+                    <select className="w-full p-3 rounded-lg bg-background/50 border border-primary/20 focus:border-primary focus:outline-none">
+                      <option>Современный</option>
+                      <option>Классический</option>
+                      <option>Минимализм</option>
+                      <option>Креативный</option>
+                      <option>Корпоративный</option>
+                    </select>
+                  </div>
+                </div>
+
+                <Button className="w-full bg-gradient-to-r from-primary to-secondary hover:opacity-90 text-lg py-4">
+                  <Icon name="Sparkles" size={20} className="mr-2" />
+                  Создать сайт с помощью AI
+                </Button>
+              </div>
+            </Card>
+
+            {/* Features & Examples */}
+            <div className="space-y-8">
+              <div className="text-center">
+                <h3 className="text-2xl font-bold mb-4">Примеры созданных сайтов</h3>
+                <p className="text-muted-foreground mb-6">
+                  Более 50,000 сайтов уже создано с помощью Grok AI
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-4">
+                <Card className="p-4 bg-card/30 border-primary/10 hover:border-primary/30 transition-all cursor-pointer">
+                  <div className="aspect-video bg-gradient-to-br from-blue-500/20 to-purple-500/20 rounded-lg mb-3 flex items-center justify-center">
+                    <Icon name="Store" size={32} className="text-primary" />
+                  </div>
+                  <h4 className="font-semibold mb-1">Интернет-магазин</h4>
+                  <p className="text-sm text-muted-foreground">Одежда и аксессуары</p>
+                </Card>
+
+                <Card className="p-4 bg-card/30 border-primary/10 hover:border-primary/30 transition-all cursor-pointer">
+                  <div className="aspect-video bg-gradient-to-br from-green-500/20 to-yellow-500/20 rounded-lg mb-3 flex items-center justify-center">
+                    <Icon name="Coffee" size={32} className="text-secondary" />
+                  </div>
+                  <h4 className="font-semibold mb-1">Кафе</h4>
+                  <p className="text-sm text-muted-foreground">Меню и заказы</p>
+                </Card>
+
+                <Card className="p-4 bg-card/30 border-primary/10 hover:border-primary/30 transition-all cursor-pointer">
+                  <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-pink-500/20 rounded-lg mb-3 flex items-center justify-center">
+                    <Icon name="Briefcase" size={32} className="text-accent" />
+                  </div>
+                  <h4 className="font-semibold mb-1">Портфолио</h4>
+                  <p className="text-sm text-muted-foreground">Дизайнер</p>
+                </Card>
+
+                <Card className="p-4 bg-card/30 border-primary/10 hover:border-primary/30 transition-all cursor-pointer">
+                  <div className="aspect-video bg-gradient-to-br from-orange-500/20 to-red-500/20 rounded-lg mb-3 flex items-center justify-center">
+                    <Icon name="Building" size={32} className="text-primary" />
+                  </div>
+                  <h4 className="font-semibold mb-1">Стартап</h4>
+                  <p className="text-sm text-muted-foreground">SaaS платформа</p>
+                </Card>
+              </div>
+
+              <div className="bg-gradient-to-r from-primary/10 to-secondary/10 rounded-lg p-6">
+                <h4 className="font-bold mb-3 flex items-center">
+                  <Icon name="Clock" size={20} className="mr-2 text-primary" />
+                  Скорость создания
+                </h4>
+                <div className="space-y-2 text-sm">
+                  <div className="flex justify-between">
+                    <span>Анализ запроса</span>
+                    <span className="text-primary font-mono">2 сек</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Генерация структуры</span>
+                    <span className="text-secondary font-mono">5 сек</span>
+                  </div>
+                  <div className="flex justify-between">
+                    <span>Создание дизайна</span>
+                    <span className="text-accent font-mono">8 сек</span>
+                  </div>
+                  <div className="flex justify-between font-bold">
+                    <span>Готовый сайт</span>
+                    <span className="text-primary font-mono">15 сек</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Interactive Chat Demo */}
       <section className="container mx-auto px-6 py-16">
         <div className="max-w-4xl mx-auto">
